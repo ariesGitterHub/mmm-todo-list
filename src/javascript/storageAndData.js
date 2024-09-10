@@ -1,7 +1,7 @@
 import { 
     Theme, 
     Folder, 
-    Task 
+    // Task,
 } from "./classes.js";
 
 import { updateUI } from "./updateUI.js";
