@@ -19,7 +19,6 @@ function getLocalStorageSize() {
 console.log("LocalStorage Size:", getLocalStorageSize(), "bytes");
 
 
-
 // THEME
 
 
@@ -49,12 +48,13 @@ export function saveTheme() {
 
 
 const defaultFolders = [
-    new Folder("f0", "*Default", "--fc00"),
-    new Folder("f1", "Chores", "--fc06"),
-    new Folder("f2", "Fitness", "--fc01"),
-    new Folder("f3", "Repair", "--fc09"),
-    new Folder("f4", "Social", "--fc03"),
-    new Folder("f5", "Travel", "--fc04"),
+  new Folder("f0", "*Default", "--fc00"),
+  new Folder("f1", "Chores", "--fc06"),
+  new Folder("f2", "Finances", "--fc04"),
+  new Folder("f3", "Fitness", "--fc01"),
+  new Folder("f4", "Repair", "--fc07"),
+  new Folder("f5", "Social", "--fc03"),
+  new Folder("f6", "Travel", "--fc09"),
 ];
 
 export function loadFolders() {
@@ -161,158 +161,7 @@ const tomorrow = getTomorrowDate();
 const dayAfterTomorrow = getDayAfterTomorrowDate(); 
 const randomFutureDate = getRandomFutureDate(); 
 
-const defaultTasks = [
-  new Task(
-    "t0",
-    "Take out the trash",
-    today,
-    "",
-    "high",
-    "incomplete",
-    "Chores",
-    "Don't forget to empty the upstairs trash cans!"
-  ),
-  new Task(
-    "t1",
-    "Grocery store",
-    tomorrow,
-    "",
-    "low",
-    "incomplete",
-    "Chores",
-    "Buy: apples, oranges, garlic, oatmeal, coffee, pasta, pasta sauce, soy milk, cheese, bread, peanut butter, and frozen blueberries."
-  ),
-  new Task(
-    "t2",
-    "Run my usual 5k course",
-    dayAfterTomorrow,
-    "",
-    "low",
-    "incomplete",
-    "Fitness",
-    "Try to go in the evening to avoid too many cars and people."
-  ),
-  new Task(
-    "t3",
-    "Get drinks with neighbors",
-    yesterday,
-    "",
-    "low",
-    "completed",
-    "Social",
-    "Be home early."
-  ),
-  new Task(
-    "t4",
-    "Visit Guedelon Castle",
-    randomFutureDate,
-    "",
-    "low",
-    "incomplete",
-    "Travel",
-    "Make sure to renew my passport in advance. It might help to learn some French too."
-  ),
-  new Task(
-    "t5",
-    "Fix the barbwire fence",
-    "2099-11-05",
-    "",
-    "high",
-    "incomplete",
-    "Repair",
-    "Watch out for the radioactive zombies and roving bands of marauders."
-  ),
-  new Task(
-    "t6",
-    "Clean out the gutters",
-    tomorrow,
-    "",
-    "low",
-    "incomplete",
-    "Chores",
-    ""
-  ),
-  new Task(
-    "t7",
-    "Finish laundry",
-    dayAfterTomorrow,
-    "",
-    "low",
-    "incomplete",
-    "Chores",
-    "Try to hang most of it on the drying rack in the bathroom."
-  ),
-  new Task(
-    "t8",
-    "Finish up The Odin Project",
-    randomFutureDate,
-    "",
-    "low",
-    "incomplete",
-    "*Default",
-    "Be tenacious!!!!!!"
-  ),
-  new Task(
-    "t9",
-    "Summon Cthulhu",
-    "2069-04-01",
-    "",
-    "high",
-    "incomplete",
-    "*Default",
-    "ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn."
-  ),
-  new Task(
-    "t10",
-    "Breakfast with the cousin",
-    dayAfterTomorrow,
-    "",
-    "low",
-    "incomplete",
-    "Social",
-    "It's my turn to buy."
-  ),
-  new Task(
-    "t11",
-    "Vote",
-    "2024-11-05",
-    "",
-    "high",
-    "incomplete",
-    "*Default",
-    "Get breakfast beforehand."
-  ),
-  new Task(
-    "t12",
-    "Neighborhood block party",
-    "2024-09-21",
-    "",
-    "low",
-    "incomplete",
-    "Social",
-    "Should I make a dish?"
-  ),
-  new Task(
-    "t13",
-    "Do a long run",
-    "2024-09-01",
-    "",
-    "low",
-    "completed",
-    "Fitness",
-    "Stretch afterwards..."
-  ),
-  new Task(
-    "t14",
-    "Fix dryer",
-    "2024-08-31",
-    "",
-    "low",
-    "completed",
-    "Repair",
-    "Buy a new fuse to fix this. Try to get the original part."
-  ),
-];
+const defaultTasks = [];
 
 export function loadTasks() {
     const savedTasks = localStorage.getItem("tasks");
